@@ -23,7 +23,7 @@ for i in range(0,xnum):
 
 
 #创建X,T,W矩阵
-m = 9#M阶数，可以更改
+m = 10#M阶数，可以更改
 n = len(a)
 Xa = np.zeros(shape=(n,m+1))
 for i in range(0,n):
@@ -52,7 +52,7 @@ def Mode1_2():
 
 #梯度下降
 def Mode2_1():
-    alpha = 0.1  # 学习率
+    alpha = 0.05  # 学习率
     iterNum = 100000  # 迭代次数
     W = np.mat(np.ones(shape=(m + 1, 1)))
     for i in range(0, iterNum):
@@ -61,7 +61,7 @@ def Mode2_1():
         W = W - alpha * Differential
     return W
 def Mode2_2():
-    alpha = 0.1  # 学习率
+    alpha = 0.05  # 学习率
     iterNum = 100000  # 迭代次数
     lamda = math.exp(-8)
     W = np.mat(np.ones(shape=(m + 1, 1)))
